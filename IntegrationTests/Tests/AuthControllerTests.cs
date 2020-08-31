@@ -13,14 +13,14 @@ namespace IntegrationTests.Tests
 {
     public class AuthControllerTests : BaseHttpApiTests
     {
-        private const string PwdMessage1 = "Passwords must be at least 6 characters.";
+        private const string PwdMessage1 = "Passwords must be at least 8 characters.";
         private const string PwdMessage2 = "Passwords must have at least one digit ('0'-'9').";
         private const string PwdMessage3 = "Passwords must have at least one uppercase ('A'-'Z').";
         private const string WarningMessage = "Bad registration parameters";
         private const string RegisterUrl = "/api/auth/register";
         private const string LoginUrl = "/api/auth/login";
 
-        private readonly UserDto _newUser = new UserDto { Email = "aaa@aaa.com", Login = "aaa", Password = "Bbb1981" };
+        private readonly UserDto _newUser = new UserDto { Email = "aaa@aaa.com", Login = "aaa", Password = "Bbbb1981" };
 
         [Fact]
         public async Task Register_should_register_user_successfully()
