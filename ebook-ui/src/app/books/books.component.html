@@ -1,0 +1,27 @@
+<mat-table [dataSource]="books" class="mat-elevation-z8 container">
+    <ng-container matColumnDef="bookId">
+        <mat-header-cell *matHeaderCellDef> Book Id </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.bookId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Book Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.price}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="userBookSubscription">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+            <button *ngIf="!row.userBookSubscription" mat-button color="primary" (click)="buy(row)">Buy</button>
+            <button *ngIf="row.userBookSubscription" mat-button color="primary" (click)="cancelSubscription(row)">Cancel Subscription</button>
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

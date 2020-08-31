@@ -1,0 +1,27 @@
+div.container {
+    margin: -24px;
+ }
+
+ div.message {
+     font-family: "Source Sans Pro", sans-serif;
+     padding-top: 30px;
+     padding-left: 15px;
+     padding-right: 25px;
+     padding-bottom: 0px;
+   }
+
+  .button {
+      margin-left: 10px;
+  }
+
+  mat-icon {
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.fixActionRow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }

@@ -1,0 +1,34 @@
+<div class="container">
+    <mat-toolbar color="primary" class="mat-elevation-z2">
+        <div class="fixActionRow">
+            <div>
+                {{title}}
+                <mat-icon (click)="onEscape()">close</mat-icon>
+            </div>
+        </div>
+    </mat-toolbar>
+    <div class="message">
+        <p>
+            {{message}}
+        </p>
+    </div>
+    
+    <div style="padding: 5px;float:right">
+        <div *ngIf="button==0">
+            <button class="button" mat-raised-button color="primary" (click)="onOk()" tabindex="-1">Ok</button>
+        </div>
+        <div *ngIf="button==1">
+            <button class="button" mat-raised-button color="primary" (click)="onOk()" tabindex="-1">Ok</button>
+            <button class="button" mat-raised-button color="primary" (click)="onCancel()" tabindex="-1">Cancel</button>
+        </div>
+        <div *ngIf="button==2">
+            <button class="button" mat-raised-button color="primary" (click)="onYes()" tabindex="-1">Yes</button>
+            <button class="button" mat-raised-button color="primary" (click)="onNo()" tabindex="-1">No</button>
+        </div>
+        <div *ngIf="button==3">
+            <button class="button" mat-raised-button color="primary" (click)="onAccept()" tabindex="-1">Accept</button>
+            <button class="button" mat-raised-button color="primary" (click)="onReject()" tabindex="-1">Reject</button>
+        </div>
+    </div>
+
+</div>

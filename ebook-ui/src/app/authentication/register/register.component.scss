@@ -1,0 +1,42 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+}
+
+mat-form-field {
+    display: block;
+}
+
+.set-password {
+    color: grey;
+    margin-top: -100px;
+    font-size: 15px;
+}
+
+#registration, #passRequirements {
+    display: inline-block;
+}
+.pass-requirements {
+    color: gray;
+    margin-top: 10px;
+    font-size: 13px;
+    font-style: italic;
+    float: left;
+}
+
+.mat-card-image {
+    margin-left: 5px;
+    padding-right: 10px;
+}
+
+.mat-form-field {
+    width: 100%;
+    //min-width: 300px;
+}
+
+.text-success {
+    color: green;
+}
+.text-danger {
+    color: red;
+}

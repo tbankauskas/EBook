@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <span routerLink="/">E-Books</span>
+  <span class="spacer"></span>
+  {{userName}}
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button *ngIf="!userName" mat-menu-item routerLink="/login">
+        <mat-icon>login</mat-icon>
+        <span>Sign In</span>
+      </button>
+      <button *ngIf="userName" mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Sign Out</span>
+      </button>
+      <button *ngIf="!userName" mat-menu-item routerLink="/register">
+        <mat-icon>how_to_reg</mat-icon>
+        <span>Register</span>
+      </button>
+    </mat-menu>
+  </button>
+</mat-toolbar>
